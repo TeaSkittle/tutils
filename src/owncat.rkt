@@ -13,9 +13,6 @@
         (system (string-append "echo -n 'Octal: ';" (string-append (string-append "stat -c '%a %n' " filename) "| awk '{print $1}'")))
         (system (string-append "echo -n 'r/w/x: ';" (string-append (string-append "ls -l " filename) "| awk '{print $1}' | sed 's/#\\.//'"))))
 
-(define (system-display command)
-        (display (with-output-to-string (lambda () command))))
-
 (if (= 0 (vector-length (current-command-line-arguments)))
     (exit)
     (system-display (owncat (vector-ref (current-command-line-arguments) 0))))
