@@ -11,10 +11,10 @@
   (cond
     [(path-has-extension? filename #".tar.gz")(system (string-append "tar xzf " filename))]
     [(path-has-extension? filename #".tar.bz2")(system (string-append "tar xjf " filename))]
-    [(path-has-extension? filename #".zip")(system (string-append "unzip " filename))]
-    [(path-has-extension? filename #".tar")(system (string-append "tar xvf " filename))]
     [(path-has-extension? filename #".tbz2")(system (string-append "tar xjf " filename))]
     [(path-has-extension? filename #".tgz")(system (string-append "tar xzf " filename))]
+    [(path-has-extension? filename #".tar")(system (string-append "tar xvf " filename))]
+    [(path-has-extension? filename #".zip")(system (string-append "unzip " filename))]
     [(path-has-extension? filename #".Z")(system (string-append "uncompress " filename))]
     [(path-has-extension? filename #".7z")(system (string-append "7za x " filename))]
     [(path-has-extension? filename #".xz")(system (string-append "xz -d " filename))]
