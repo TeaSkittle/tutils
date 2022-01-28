@@ -1,7 +1,7 @@
 #lang racket/base
 (require racket/port)
 
-; Will be reanming file, no idea what to call it yet
+; Will be renaming file, no idea what to call it yet
 
 (provide (all-defined-out))
 
