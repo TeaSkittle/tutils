@@ -7,7 +7,7 @@
 
 ;(path-has-extension? "walls.zip" #".zip")
 
-(define (uncomp filename)
+(define (zippo filename)
   (cond
     [(path-has-extension? filename #".tar.gz")(system (string-append "tar xzf " filename))]
     [(path-has-extension? filename #".tar.bz2")(system (string-append "tar xjf " filename))]
@@ -23,7 +23,5 @@
     [(path-has-extension? filename #".gz")(system (string-append "gunzip " filename))]
     [else (displayln "Non-supported compression format.")]))
 
-(if (= 0 (vector-length (current-command-line-arguments)))
-    (exit)
-    (system-display (uncomp (vector-ref (current-command-line-arguments) 0))))
+(run zippo)
 

@@ -7,4 +7,11 @@
 
 ; Display as string, avoiding "#t" retun value printing
 (define (system-display command)
-        (display (with-output-to-string (lambda () command))))
+  (display (with-output-to-string (lambda () command))))
+
+; "Main" function for scripts, parse command line args
+(define (run fn)
+  (if (= 0 (vector-length (current-command-line-arguments)))
+    (exit)
+    (system-display (fn (vector-ref (current-command-line-arguments) 0)))))
+
