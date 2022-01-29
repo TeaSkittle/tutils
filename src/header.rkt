@@ -10,6 +10,8 @@
   (display (with-output-to-string (lambda () command))))
 
 ; "Main" function for scripts, parse command line args
+;
+; Only works with one arg, need to make loop for more
 (define (run fn)
   (if (= 0 (vector-length (current-command-line-arguments)))
     (exit)
