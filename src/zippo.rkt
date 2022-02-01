@@ -5,8 +5,6 @@
 (require racket/port)
 (require "header.rkt")
 
-;(path-has-extension? "walls.zip" #".zip")
-
 (define (zippo filename)
   (cond
     [(path-has-extension? filename #".tar.gz")(system (string-append "tar xzf " filename))]
@@ -24,4 +22,3 @@
     [else (displayln "Non-supported compression format.")]))
 
 (run zippo)
-
