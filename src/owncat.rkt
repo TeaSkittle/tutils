@@ -17,9 +17,9 @@
   (string-append (string-append "ls -l " filename) "| awk '{print $1}' | sed 's/#\\.//'"))
 
 (define (owncat filename)
-  (lead-echo "Owner: " (get-owner filename))
-  (lead-echo "Group: " (get-group filename))
-  (lead-echo "Octal: " (get-octal filename))
+  (lead-echo "Owner: "  (get-owner filename))
+  (lead-echo "Group: "  (get-group filename))
+  (lead-echo "Octal: "  (get-octal filename))
   (lead-echo "r/w/x/: " (get-rwx filename)))
 
 (run owncat)
