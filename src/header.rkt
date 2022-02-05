@@ -22,8 +22,5 @@
 
 ; Have echo followed by command, helps clean up all the string-appends
 (define (lead-echo str cmd)
-  (system-display
-   (system
-    (string-append
-     (string-append "echo -n '" str (string-append "' ; " cmd))))))
+  (system-display (system (string-append (string-append "echo -n '" str (string-append "' ; " cmd))))))
 
