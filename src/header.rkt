@@ -25,6 +25,5 @@
   (system-display
    (system
     (string-append
-     (string-append "echo -n '" str
-                    (string-append "' ; " cmd))))))
+     (string-append "echo -n '" str (string-append "' ; " cmd))))))
 
