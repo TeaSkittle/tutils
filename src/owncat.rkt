@@ -4,10 +4,23 @@
 (require racket/port)
 (require "header.rkt")
 
+(define (get-owner filename)
+  (string-append (string-append "ls -l " filename) "| awk '{print $3}'"))
+
+(define (get-group filename)
+  (string-append (string-append "ls -l " filename) "| awk '{print $4}'"))
+
+(define (get-octal filename)
+  (string-append (string-append "stat -c '%a %n' " filename) "| awk '{print $1}'"))
+
+(define (get-rwx filename)
+  (string-append (string-append "ls -l " filename) "| awk '{print $1}' | sed 's/#\\.//'"))
+
 (define (owncat filename)
-  (system (string-append "echo -n 'Owner: ';" (string-append (string-append "ls -l " filename) "| awk '{print $3}'")))
-  (system (string-append "echo -n 'Group: ';" (string-append (string-append "ls -l " filename) "| awk '{print $4}'")))
-  (system (string-append "echo -n 'Octal: ';" (string-append (string-append "stat -c '%a %n' " filename) "| awk '{print $1}'")))
-  (system (string-append "echo -n 'r/w/x: ';" (string-append (string-append "ls -l " filename) "| awk '{print $1}' | sed 's/#\\.//'"))))
+  (lead-echo "Owner: " (get-owner filename))
+  (lead-echo "Group: " (get-group filename))
+  (lead-echo "Octal: " (get-octal filename))
+  (lead-echo "r/w/x/: " (get-rwx filename)))
 
 (run owncat)
+
