@@ -1,11 +1,12 @@
 #lang racket/base
+(require racket/system)
 (require racket/port)
 
 ; Will be renaming file, no idea what to call it yet
 
 (provide (all-defined-out))
 
-; Display as string, avoiding the "#t" printing
+; Display while avoiding the "#t" printing
 (define (system-display command)
   (display (with-output-to-string (lambda () command))))
 
@@ -18,4 +19,12 @@
     ; Loop here
     ; https://beautifulracket.com/explainer/loops.html
     (system-display (fn (vector-ref (current-command-line-arguments) 0)))))
+
+; Have echo followed by command, helps clean up all the string-appends
+(define (lead-echo str cmd)
+  (system-display
+   (system
+    (string-append
+     (string-append "echo -n '" str
+                    (string-append "' ; " cmd))))))
 
