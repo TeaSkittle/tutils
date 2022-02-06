@@ -4,7 +4,7 @@
 (require "header.rkt")
 
 ; TODO:
-; Uptime may display werid over 10 hours, need to test
+; Uptime may display weird over 10 hours, need to test
 
 ; Variables
 (define get-user  (getenv "USER"))
