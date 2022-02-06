@@ -1,5 +1,5 @@
 #!/usr/bin/racket
-#lang racket
+#lang racket/base
 (require racket/system)
 (require racket/port)
 (require "header.rkt")
