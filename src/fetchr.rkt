@@ -5,6 +5,9 @@
 
 ; TODO:
 ; Uptime may display weird over 10 hours, need to test
+;
+; Did not work on WSL, uptime is different on Ubuntu
+; Broke at DE here as well
 
 ; Variables
 (define get-user  (getenv "USER"))
