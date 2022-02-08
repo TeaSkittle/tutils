@@ -3,11 +3,7 @@
 (require racket/system)
 (require "header.rkt")
 
-; TODO:
-; Uptime may display weird over 10 hours, need to test
-;
-; Did not work on WSL, uptime is different on Ubuntu
-; Broke at DE here as well
+; Does not work on WSL, meant for Linux use only
 
 ; Variables
 (define get-user  (getenv "USER"))
