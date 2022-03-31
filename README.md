@@ -1,6 +1,6 @@
 # tutils
 
-tutils (**too-tilz**) is a collection of *NIX scripts and tools I have written entirely in [Racket](https://racket-lang.org/). 
+tutils (**too-tilz**) is a collection of Linux scripts and tools I have written entirely in [Racket](https://racket-lang.org/). 
 
 ## Tools
 
