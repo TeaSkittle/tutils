@@ -3,10 +3,12 @@
 (require racket/system)
 (require "header.rkt")
 
-; W.I.P.
+; Only tested on my machine, could be different depending on number of cores
 
-; Convert C to F
-(define (convert c)
-  (exact->inexact (+ (* c 9/5) 32)))
+(define get-f "echo \"$(cat /sys/class/thermal/thermal_zone2/temp) * 0.001 * (9/5) + 32\" | bc -l")
+(define get-c "echo \"$(cat /sys/class/thermal/thermal_zone2/temp) * 0.001\" | bc -l")
 
-(define get-temps "cat /sys/class/thermal/thermal_zone*/temp")
+(displayln "CPU Temps")
+(displayln "---------")
+(lead-echo "Fahrenheit: " get-f)
+(lead-echo "Celsius:    " get-c)
