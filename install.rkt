@@ -5,7 +5,10 @@
 ; curl https://raw.githubusercontent.com/TeaSkittle/tutils/main/install.rkt | racket
 
 (newline)
-(displayln "Testing...")
-;(system "git clone https://github.com/TeaSkittle/tutils")
-;(system "cd tutils/src")
+(displayln "Installing...")
+
+(system "git clone https://github.com/TeaSkittle/tutils")
+(system "cd tutils/src")
 ;(system "raco exe -o app app.rkt) ; not accurate, placeholder
+
+(displayln "Install complete")
