@@ -9,7 +9,7 @@ Dependancies:
 + Racket  
 + Git
 
-Run this command to install:  
+Run this command to install: :warning:**Not functioning yet, still testing**:warning:  
 
 ```bash
 curl https://raw.githubusercontent.com/TeaSkittle/tutils/main/install.rkt | racket
