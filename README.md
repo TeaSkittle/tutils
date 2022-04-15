@@ -2,6 +2,19 @@
 
 tutils (**too-tilz**) is a collection of Linux scripts and tools I have written entirely in [Racket](https://racket-lang.org/). 
 
+## Install
+
+Dependancies:  
+
++ Racket  
++ Git
+
+Run this command to install:  
+
+```bash
+curl https://raw.githubusercontent.com/TeaSkittle/tutils/main/install.rkt | racket
+```
+
 ## Tools
 
 **owncat** - Neatly print out file permissions  
