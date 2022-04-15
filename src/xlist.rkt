@@ -1,3 +1,4 @@
+#!/usr/bin/racket
 #lang racket/base
 (require shell/pipeline)
 (require "header.rkt")
