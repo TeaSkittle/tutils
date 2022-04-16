@@ -4,12 +4,15 @@
 (require "header.rkt")
 
 ; Convert Shell command for use in shell/pipeline
-; The command must be wrapped in ' '
+; The command must be wrapped in quotes
 ;
 ; Example Input:
-;   $ piper 'awk "{print $9}" | tail -n +2'
+;   $ piper "echo \"Hello, World!\" | awk '{print \$1}'"
+;
 ; Example Output"
-;   $ '(awk "{print $9}" )'( tail -n +2)
+;   $ '(echo "Hello, World!")'(awk '{print $1}')
+;
+; In above example you need to have \ infront of $, awk is a bit weird here
 
 (define (convert l)
   (for ([i (string-split l "|")])
