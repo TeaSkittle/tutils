@@ -22,3 +22,4 @@ curl https://raw.githubusercontent.com/TeaSkittle/tutils/main/install.rkt | rack
 **fetchr** - Simple system information fetcher  
 **tempr** - Get CPU temps  
 **xlist** - List all executable files in current directory  
+**piper** - Convert Shell command for use in shell/pipeline  
