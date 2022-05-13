@@ -23,3 +23,4 @@ curl https://raw.githubusercontent.com/TeaSkittle/tutils/main/install.rkt | rack
 **tempr** - Get CPU temps  
 **xlist** - List all executable files in current directory  
 **piper** - Convert Shell command for use in shell/pipeline  
+**scanr** - Scan common network ports using netcat
