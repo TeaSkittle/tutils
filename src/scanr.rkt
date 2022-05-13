@@ -2,7 +2,7 @@
 #lang racket/base
 (require "header.rkt")
 
-; Scan common ports usin netcat
+; Scan common network ports using netcat
 
 (define (command-list target)
   (string-append (string-append "nc -vzw1 " target)
