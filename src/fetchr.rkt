@@ -9,7 +9,7 @@
 (define get-user     (getenv "USER"))
 (define get-shell    (getenv "SHELL"))
 (define get-de       (getenv "XDG_CURRENT_DESKTOP"))
-(define get-os       "cat /etc/*-release | grep '^NAME' | cut -c 7- | tr '\"' ' '")
+(define get-os       "ls /etc/*-release | grep '^NAME' | cut -c 7- | tr '\"' ' '")
 (define get-kernel   "cat /proc/version | cut -c 15- | cut -d '(' -f1")
 (define get-cpu      "cat /proc/cpuinfo | grep 'model name' | uniq | cut -c 14-")
 (define get-hostname "cat /proc/sys/kernel/hostname")
