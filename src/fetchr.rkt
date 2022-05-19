@@ -4,6 +4,7 @@
 (require "header.rkt")
 
 ; Does not work on WSL, meant for Linux use only
+; (get-os) works but is distro dependant, commented out since I do not want to make this work on every linux distro right now
 
 ; Variables
 (define get-user     (getenv "USER"))
