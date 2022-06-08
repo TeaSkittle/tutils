@@ -6,7 +6,7 @@
 
 (define (get-site domain url)
   (string-append (string-append "wget --recursive --no-clobber --page-requisites
---html-extension --convert-links --restrict-file-names=windows" domain)
-                 "--no-parent" url))
+--html-extension --convert-links --restrict-file-names=windows " domain)
+                 " --no-parent " url))
 
 (run get-site)
