@@ -1,5 +1,6 @@
 #!/usr/bin/racket
 #lang racket/base
+(require "header.rkt")
 
 ; Need to test
 ; Will most likely rename file
